@@ -1,0 +1,144 @@
+Test Questions
+
+
+Q1: Return total number of alphabets in given text.
+Ans. 
+string = input("Please Enter your Own String : ")
+alphabets = 0
+for i in range(len(string)):
+    if(string[i].isalpha()):
+        alphabets = alphabets + 1
+  
+print("\nTotal Number of Alphabets in this String :  ", alphabets)
+
+
+ ######################################
+
+Q2: Return total number of sentences in given text.
+Ans.
+le = "The best programs are written badly."
+# print('Total words:   ', len(le.split()))
+flag = 0
+a = "."
+b=le[-1]
+if a != b:
+    flag=1
+c = le.count('.')
+
+print('sentenceCount    ', flag + c)
+# print(flag)
+# print(le[-1])
+# print(a)
+
+
+ ######################################
+
+
+Q3: Remove duplicates from array list.
+
+Ans. 
+def removeDuplicates (list1):
+	
+	list2 = [] 
+	for n in list1:
+		if n not in list2:
+			list2.append (n)
+	return list2
+list1 = [10, 20, 10, 20, 30, 40, 30, 50] 
+print ("Original list:", list1)
+print ("List after duplicate remove:", removeDuplicates (list1))
+
+
+ ######################################
+
+
+Q4. The challenge is to create a simple Card Deck Game.\nThe Rules:\n - The game can have n number of players.\n - Each player starts with a pot amount of 1000 Chips.\n - Each player draws two cards from the Deck turn-by-turn.\n - For each card drawn in the turn:\n - Depending upon the suit of the card, following transactions are done on the player's pot amount:\n - Spade (SP): Credit 100 chips.\n - Club (CL): Credit 50 chips.\n - Heart (HT): Debit 100 chips.\n - Diamond (DD): Debit 50 chips.\n - After total 5 chances for each player, the one with the highest pot wins.\n\nInput:\n - A list of the cards drawn by each player in all turns
+
+Ans. 
+
+print("Enter Number Of Games You Want To Play")
+GT = int(input())
+SPP = {'SP':100,'CL':50,'HT':-100,'DD':-50}
+PP = []
+PP1 = []
+PP2 = []
+P1 = 1000
+P2 = 1000
+# def get_key(val): 
+#     for key, value in SPP.items(): 
+#          if val == value: 
+#              return key 
+  
+# SP = 100
+# CL = 50
+# HT = -100
+# DD = -50
+print("Enter Person 1")
+for i in range(0,GT):
+    for j in range(0, 2):
+        PP = input()
+        A = SPP[PP]
+        P1 +=A
+print("Enter Person 2")
+for i in range(0,GT):
+    for j in range(0, 2):
+        PP = input()
+        A = SPP[PP]
+        P2 +=A
+        
+if P1>P1:
+    print("player1")
+else:
+    print("player2")
+    
+# print(P1)
+
+
+
+ ######################################
+
+
+Q5: Return a list of all prime numbers between the given range (both ends not included).
+Ans.
+for Number in range (4560, 4679):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
+
+
+ ######################################
+
+
+
+Q6. Return the count of occurence for each vowel in the input string.
+
+vowels = 'aeiou'
+
+ip_str = 'Hello, have you tried our tutorial section yet?'
+
+ip_str = ip_str.casefold()
+count = {}.fromkeys(vowels,0)
+for char in ip_str:
+   if char in count:
+       count[char] += 1
+
+print(count)
+
+
+ ######################################
+
+
+
+Q7. Return the count of words in the input string
+
+def word_count(string):
+    tokens = string.split()
+    n_tokens = len(tokens)
+    return (n_tokens)
+
+print(word_count("A big brown fox jumped over the log."))
